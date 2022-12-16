@@ -9,7 +9,12 @@ function ExperimentView ({
   const [hasClicked, setHasClicked] = useState(false)
   const onButtonClick = useCallback(() => {
     if (!hasClicked) setHasClicked(true)
+
+    if (window.dataLayer) {
+      window.dataLayer.push({ event: 'success_button_click' })
+    }
   })
+
   return (
     <section className="ExperimentView">
       <h2 className="ExperimentView__Experience">
@@ -50,5 +55,5 @@ ExperimentView.defaultProps = {
 }
 
 ExperimentView.propTypes = {
-  experience: PropTypes.string.isRequired
+  experience: PropTypes.string
 }
