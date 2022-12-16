@@ -3,7 +3,16 @@
   max-width: 20rem;
   flex-grow: 1;
   padding: 1.5rem;
+  border-radius: 0.75rem;
   background-color: blueviolet;
+}
+
+.ExperimentView--Original {
+  background-color: goldenrod;
+}
+
+.ExperimentView--Variant2 {
+  background-color: brown;
 }
 
 .ExperimentView__Experience{

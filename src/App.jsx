@@ -9,12 +9,12 @@ import './App.css'
 function App () {
   return (
     <div className="App">
-      <h1>A/B Testing in Google Optimize with React!</h1>
+      <h1>A/B Testing in Google Optimize with React 👌</h1>
       <ABExperiment
         experimentId={import.meta.env.VITE_OPTIMIZE_EXPERIMENT_ID}
         variants={{
-          0: 'Original',
-          1: 'Variant 2'
+          0: 'original',
+          1: 'variant_2'
         }}
       >
         {({ variant, loading }) => (

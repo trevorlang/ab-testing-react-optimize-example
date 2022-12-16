@@ -16,17 +16,28 @@ function ExperimentView ({
     }
   })
 
+  const conditionalClassNames = []
+
+  if (experience === 'original') conditionalClassNames.push('ExperimentView__Original')
+  if (experience === 'variant_2') conditionalClassNames.push('ExperimentView__Variant2')
+
   return (
     <section className="ExperimentView">
       <h2 className="ExperimentView__Experience">
       {
-        !experience
-          ? (
-              <>No experience set</>
-            )
-          : (
-              <>Experience: {experience}</>
-            )
+        !experience && (
+          <>No experience set</>
+        )
+      }
+      {
+        experience === 'original' && (
+          <>Experience: Original</>
+        )
+      }
+      {
+        experience === 'variant_2' && (
+          <>Experience: Variant 2</>
+        )
       }
       </h2>
       <button
