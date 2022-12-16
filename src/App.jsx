@@ -1,6 +1,7 @@
+import React from 'react'
 import './App.css'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <h1>A/B Testing in Google Optimize with React!</h1>
