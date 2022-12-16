@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 
 import './ExperimentView.css'
 
+/**
+ * Renders the ExperimentView component
+ * @param {object} props - The props passed into the component.
+ * @param {function} props.experience - The name of the active experience.
+ */
 function ExperimentView ({
   experience
 }) {

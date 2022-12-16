@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 /**
  * Takes a Google Optimize experiment id, and if a valid variant is found for that experiment, returns
  * the variant id assigned by Google Optimize.
- * @returns {String} - The experiment id. If undefined is returned, no valid experiment/variant was found
+ * @returns {object} - The experiment id and a loading flag are returned in an object
  */
 function useExperiment (experimentId) {
   const [variant, setVariant] = useState()

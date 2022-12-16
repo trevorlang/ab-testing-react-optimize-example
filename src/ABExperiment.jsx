@@ -9,10 +9,10 @@ import useExperiment from './hooks/useExperiment'
  * the variant id directly from Google Optimize. The variants mapping can be
  * used to return human-readable names for the variants. If an error occurs, the
  * `variant` prop will be `undefined`.
- * @param {Object} props - The props passed into the component.
- * @param {Function} props.children - A function returning React elements.
- * @param {String} props.experimentId - The unique experiment id provided by Google Optimize.
- * @param {Object} props.variants - A mapping of the variant ids provided from Google Optimize
+ * @param {object} props - The props passed into the component.
+ * @param {function} props.children - A function returning React elements.
+ * @param {string} props.experimentId - The unique experiment id provided by Google Optimize.
+ * @param {object} props.variants - A mapping of the variant ids provided from Google Optimize
  *  to human-readable names to be returned to the children function.
  */
 function ABExperiment ({

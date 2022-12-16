@@ -6,6 +6,9 @@ import ABExperiment from './ABExperiment'
 
 import './App.css'
 
+/**
+ * Renders the App component
+ */
 function App () {
   return (
     <div className="App">
