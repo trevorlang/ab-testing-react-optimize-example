@@ -23,21 +23,21 @@ function ABExperiment ({
 }) {
   // If there is no experiment id, return the children without a variant, which will
   // render the default variant
-  if (!experimentId || !variants) return children({ variant: undefined })
+  if (!experimentId) return children({ variant: undefined })
 
   // Variant hook returns the variant id for a given matching
   // Google Optimize experiment
-  console.log('calling hook')
-  const variantId = useExperiment(experimentId)
+  const { variant: variantId, loading } = useExperiment(experimentId)
+
+  // Call the children function and provide the variant
+  if (loading) return children({ variant: undefined, loading })
 
   // If a variant is defined in the variants mapping, return the value
   // for the given key, otherwise return the variant id set by Google Optimize.
   const variant = variants[variantId] || variantId
 
-  console.log('rendering')
-
   // Call the children function and provide the variant
-  return children({ variant })
+  return children({ variant, loading })
 }
 
 ABExperiment.defaultProps = {

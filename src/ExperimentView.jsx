@@ -7,6 +7,7 @@ function ExperimentView ({
   experience
 }) {
   const [hasClicked, setHasClicked] = useState(false)
+
   const onButtonClick = useCallback(() => {
     if (!hasClicked) setHasClicked(true)
 
@@ -21,10 +22,10 @@ function ExperimentView ({
       {
         !experience
           ? (
-            <>No experience set</>
+              <>No experience set</>
             )
           : (
-              experience
+              <>Experience: {experience}</>
             )
       }
       </h2>
@@ -40,7 +41,7 @@ function ExperimentView ({
               <>Click Me</>
               )
             : (
-              <>Thanks :)</>
+              <>Great success!</>
               )
         }
       </button>

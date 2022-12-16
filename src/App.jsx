@@ -1,4 +1,6 @@
 import React from 'react'
+import { BounceLoader } from 'react-spinners'
+
 import ExperimentView from './ExperimentView'
 import ABExperiment from './ABExperiment'
 
@@ -9,14 +11,16 @@ function App () {
     <div className="App">
       <h1>A/B Testing in Google Optimize with React!</h1>
       <ABExperiment
-        experimentId='1234'
+        experimentId={import.meta.env.VITE_OPTIMIZE_EXPERIMENT_ID}
         variants={{
-          1: 'A',
-          2: 'B'
+          0: 'Original',
+          1: 'Variant 2'
         }}
       >
-        {({ variant }) => (
-          <ExperimentView experience={variant} />
+        {({ variant, loading }) => (
+          loading
+            ? <BounceLoader color="#FFFFFF" speedMultiplier={1.5} />
+            : <ExperimentView experience={variant} />
         )}
       </ABExperiment>
     </div>
