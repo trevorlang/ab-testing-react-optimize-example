@@ -1,0 +1,26 @@
+.ExperimentView {
+  width: 100%;
+  max-width: 20rem;
+  flex-grow: 1;
+  padding: 1.5rem;
+  background-color: blueviolet;
+}
+
+.ExperimentView__Experience{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.ExperimentView__Button {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  outline: 0;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+}

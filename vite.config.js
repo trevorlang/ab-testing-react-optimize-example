@@ -4,11 +4,9 @@ import eslint from 'vite-plugin-eslint'
 import { VitePluginRadar } from 'vite-plugin-radar'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
 
-  console.log('VitePluginRadar', VitePluginRadar)
-  console.log('env.VITE_GTM_CONTAINER_ID', env.VITE_GTM_CONTAINER_ID)
   return {
     plugins: [
       react(),
