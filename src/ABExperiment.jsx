@@ -1,4 +1,3 @@
-import { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import useExperiment from './hooks/useExperiment'
@@ -52,4 +51,4 @@ ABExperiment.propTypes = {
   variants: PropTypes.object
 }
 
-export default memo(ABExperiment)
+export default ABExperiment
