@@ -17,7 +17,7 @@ function App () {
         experimentId={import.meta.env.VITE_OPTIMIZE_EXPERIMENT_ID}
         variants={{
           0: 'original',
-          1: 'variant_2'
+          1: 'variant_b'
         }}
       >
         {({ variant, loading }) => (

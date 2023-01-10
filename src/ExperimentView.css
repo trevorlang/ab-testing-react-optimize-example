@@ -31,6 +31,15 @@
   font-weight: 900;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: none;
+  cursor: pointer;
+  scale: 1;
+  transition: all 0.15s ease-in;
+}
+
+.ExperimentView__Button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  translate: 0 0;
+  scale: 1.02;
 }
 
 .ExperimentView__Button:disabled {

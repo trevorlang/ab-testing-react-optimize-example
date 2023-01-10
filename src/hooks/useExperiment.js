@@ -38,7 +38,7 @@ function useExperiment (experimentId) {
         }
       }, 100)
     })()
-  })
+  }, [])
 
   return {
     loading,

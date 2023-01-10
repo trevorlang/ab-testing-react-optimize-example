@@ -13,18 +13,18 @@ function ExperimentView ({
 }) {
   const [hasClicked, setHasClicked] = useState(false)
 
-  const onButtonClick = () => {
+  const onButtonClick = async () => {
     if (!hasClicked) setHasClicked(true)
 
     if (window.dataLayer) {
-      window.dataLayer.push({ event: 'success_button_click' })
+      await window.dataLayer.push({ event: 'success_button_click_trigger' })
     }
   }
 
   const conditionalClassNames = []
 
   if (experience === 'original') conditionalClassNames.push('ExperimentView--Original')
-  if (experience === 'variant_2') conditionalClassNames.push('ExperimentView--Variant2')
+  if (experience === 'variant_b') conditionalClassNames.push('ExperimentView--Variant2')
 
   return (
     <section className={`ExperimentView ${conditionalClassNames.join(' ')}`}>
@@ -40,7 +40,7 @@ function ExperimentView ({
         )
       }
       {
-        experience === 'variant_2' && (
+        experience === 'variant_b' && (
           <>Experience: Variant 2</>
         )
       }
