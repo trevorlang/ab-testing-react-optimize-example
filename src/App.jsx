@@ -12,7 +12,7 @@ import './App.css'
 function App () {
   return (
     <div className="App">
-      <h1>A/B Testing in Google Optimize with React 👌</h1>
+      <h1>A/B Testing in React with Google Optimize 👌</h1>
       <ABExperiment
         experimentId={import.meta.env.VITE_OPTIMIZE_EXPERIMENT_ID}
         variants={{
