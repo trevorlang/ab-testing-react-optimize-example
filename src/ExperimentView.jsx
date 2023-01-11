@@ -14,9 +14,12 @@ function ExperimentView ({
   const [hasClicked, setHasClicked] = useState(false)
 
   const onButtonClick = async () => {
-    if (!hasClicked) setHasClicked(true)
+    setHasClicked(true)
 
     if (window.dataLayer) {
+      // Fire the success_button_click_trigger event. A trigger is set up in Google Tag Manager
+      // Looking for this trigger, to then fire a GA4 event that serves as the objective in the Optimize
+      // experiment.
       await window.dataLayer.push({ event: 'success_button_click_trigger' })
     }
   }
@@ -50,17 +53,12 @@ function ExperimentView ({
             <button
               className="ExperimentView__Button"
               type="button"
-              disabled={hasClicked}
               onClick={() => onButtonClick()}
             >
               {
                 !hasClicked
-                  ? (
-                      <>Click Me, Please 👈</>
-                    )
-                  : (
-                      <>✅ Great success!</>
-                    )
+                  ? <>Click Me, Please 👈</>
+                  : <>✅ Great success!</>
               }
             </button>
           )
